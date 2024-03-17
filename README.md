@@ -4,6 +4,8 @@
 
 MedTranslate 360 redefines medical documentation by providing an AI-powered assistant designed specifically for healthcare professionals. With MedTranslate 360, we aim to streamline the documentation process, enhance patient care, and ensure privacy and compliance with healthcare regulations. Leveraging advanced AI technologies, MedTranslate 360 offers voice-to-text transcription, real-time translation, and secure handling of sensitive patient information.
 
+### [Live Demo](https://medtranslate-360.streamlit.app/)
+
 ## Features
 
 - **Voice-to-Text Transcription:** Effortlessly convert your voice notes into text, allowing for hands-free documentation while you focus on your patient.
