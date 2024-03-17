@@ -34,7 +34,7 @@ def main():
     genai.configure(api_key=st.secrets["gemini_key"])
     llm_model = genai.GenerativeModel('gemini-pro')
 
-    model = whisper.load_model("base")
+    model = whisper.load_model("tiny")
     audio_bytes = audio_recorder(pause_threshold=2.0)
     
     if audio_bytes:
