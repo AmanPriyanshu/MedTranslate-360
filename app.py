@@ -3,7 +3,7 @@ from audio_recorder_streamlit import audio_recorder
 import whisper
 import google.generativeai as genai
 
-product_name = "MediSpeak"  # Product name variable
+product_name = "MedTranslate 360"  # Product name variable
 
 def translate_through_gemini(llm_model, text, target_language):
     # This function should use the Gemini API to translate the text to the target_language.
@@ -17,10 +17,10 @@ def deanonymize_through_gemini(llm_model, text):
 
 def main():
     st.title(product_name)  # Adding a title to the app
-    st.markdown("""Welcome to MediSpeak, your cutting-edge AI-powered medical documentation assistant designed to streamline the documentation process for healthcare professionals. MediSpeak revolutionizes the way medical notes are created and managed, leveraging advanced AI to transcribe, translate, and protect sensitive medical conversations with unparalleled accuracy and efficiency.
+    st.markdown("""Welcome to MedTranslate 360, your cutting-edge AI-powered medical documentation assistant designed to streamline the documentation process for healthcare professionals. MedTranslate 360 revolutionizes the way medical notes are created and managed, leveraging advanced AI to transcribe, translate, and protect sensitive medical conversations with unparalleled accuracy and efficiency.
 
 
-**Using MediSpeak is as intuitive as it is innovative:** To pause recording, you don't need to navigate through the app or press any buttons. Simply stop speaking for 2 seconds, and MediSpeak will automatically pause the recording. This feature is crafted to enhance usability and ensure seamless integration into the fast-paced medical environment, allowing you to focus more on patient care and less on managing technology.
+**Using MedTranslate 360 is as intuitive as it is innovative:** To pause recording, you don't need to navigate through the app or press any buttons. Simply stop speaking for 2 seconds, and MedTranslate 360 will automatically pause the recording. This feature is crafted to enhance usability and ensure seamless integration into the fast-paced medical environment, allowing you to focus more on patient care and less on managing technology.
     """)  # Short description
     genai.configure(api_key=st.secrets["gemini_key"])
     llm_model = genai.GenerativeModel('gemini-pro')
