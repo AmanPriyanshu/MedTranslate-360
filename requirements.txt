@@ -1,0 +1,4 @@
+audio-recorder-streamlit
+streamlit
+openai-whisper
+google-generativeai
