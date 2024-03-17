@@ -17,6 +17,15 @@ def deanonymize_through_gemini(llm_model, text):
 
 def main():
     st.title(product_name)  # Adding a title to the app
+    with st.sidebar:
+        st.image("logo.png")
+        st.markdown("""## Market Research and Potential Revenue:
+* HIPAA fines avoidance: $50,000/incident.
+* Potential ROI per institution: 600,000 USD.
+* Industry potential for Privacy Compliance: 3.6 Billion USD annually.
+* Automated translation savings: 319.27 Million USD annually.
+* Physician time savings: $284,202/doctor/year.
+            """)
     st.markdown("""Welcome to MedTranslate 360, your cutting-edge AI-powered medical documentation assistant designed to streamline the documentation process for healthcare professionals. MedTranslate 360 revolutionizes the way medical notes are created and managed, leveraging advanced AI to transcribe, translate, and protect sensitive medical conversations with unparalleled accuracy and efficiency.
 
 
