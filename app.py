@@ -17,7 +17,11 @@ def deanonymize_through_gemini(llm_model, text):
 
 def main():
     st.title(product_name)  # Adding a title to the app
-    st.write("Welcome to MediSpeak, your AI-powered medical documentation assistant.")  # Short description
+    st.markdown("""Welcome to MediSpeak, your cutting-edge AI-powered medical documentation assistant designed to streamline the documentation process for healthcare professionals. MediSpeak revolutionizes the way medical notes are created and managed, leveraging advanced AI to transcribe, translate, and protect sensitive medical conversations with unparalleled accuracy and efficiency.
+
+
+**Using MediSpeak is as intuitive as it is innovative:** To pause recording, you don't need to navigate through the app or press any buttons. Simply stop speaking for 2 seconds, and MediSpeak will automatically pause the recording. This feature is crafted to enhance usability and ensure seamless integration into the fast-paced medical environment, allowing you to focus more on patient care and less on managing technology.
+    """)  # Short description
     genai.configure(api_key=st.secrets["gemini_key"])
     llm_model = genai.GenerativeModel('gemini-pro')
 
@@ -31,8 +35,7 @@ def main():
             
         result = model.transcribe("sample.wav")
         direct_speech_to_text = result["text"]
-        st.write(f'The text in video: \n{direct_speech_to_text}')
-        
+        st.markdown("## Transcribed Text")
         st.info(direct_speech_to_text)  # Display the direct speech to text
         
         language = st.text_input("Enter a language of choice for translation:")  # Ask for language input
@@ -41,11 +44,11 @@ def main():
         if translate_button and language:
             translated_text = translate_through_gemini(llm_model, direct_speech_to_text, language)
             st.markdown("## Translated Medical Note:")
-            st.success(translated_text)  # Display the translated text
+            st.success(translated_text.text)  # Display the translated text
             
             deanonymized_text = deanonymize_through_gemini(llm_model, direct_speech_to_text)
             st.markdown("## Deanonymized Medical Note:")
-            st.warning(deanonymized_text)  # Display the deanonymized text for hospital records
+            st.warning(deanonymized_text.text)  # Display the deanonymized text for hospital records
 
 if __name__ == '__main__':
     main()
