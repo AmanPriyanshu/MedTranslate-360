@@ -24,7 +24,7 @@ def main():
 * Potential ROI per institution: 600,000 USD.
 * Industry potential for Privacy Compliance: 3.6 Billion USD annually.
 * Automated translation savings: 319.27 Million USD annually.
-* Physician time savings: $284,202/doctor/year.
+* Physician time savings: $71,050/doctor/year.
             """)
     st.markdown("""Welcome to MedTranslate 360, your cutting-edge AI-powered medical documentation assistant designed to streamline the documentation process for healthcare professionals. MedTranslate 360 revolutionizes the way medical notes are created and managed, leveraging advanced AI to transcribe, translate, and protect sensitive medical conversations with unparalleled accuracy and efficiency.
 
