@@ -37,3 +37,19 @@ MedTranslate 360 redefines medical documentation by providing an AI-powered assi
 
 - Speak clearly and at a moderate pace to ensure accuracy in voice recognition and transcription.
 - In noisy environments, consider using a noise-canceling microphone for better transcription quality.
+
+## Methodology
+
+The MedTranslate 360 system employs a cutting-edge methodology to offer the aforementioned services in medical documentation and translation. This section delves into the core technologies and practices that empower our system, ensuring efficiency, accuracy, and compliance.
+
+### Speech-to-Text Transcription
+
+For converting speech into text, MedTranslate 360 leverages the OpenAI Whisper model. Whisper has been recognized for its exceptional accuracy in understanding and transcribing natural language from audio. To optimize performance without compromising on accuracy during deployment, we utilize a process known as quantization. Specifically, the model is adapted to use 16-bit representations for its numerical data instead of the standard 32-bit.
+
+### Real-Time Translation
+
+The translation component of MedTranslate 360 is powered by Google's Gemini, an advanced language translation model. Our prompts ensure that the generated note maintains the integrity of medical information across language barriers, ensuring that translations are not only accurate but also appropriately convey the intended medical insights and observations.
+
+### Compliance and Privacy Protection
+
+To address the critical aspect of compliance and privacy protection, particularly concerning the Health Insurance Portability and Accountability Act (HIPAA), MedTranslate 360 incorporates innovative prompt-engineering techniques inspired by recent [academic research](https://arxiv.org/abs/2305.15008). This method allows us to replicate the reduced leakages by up to 83.3% across all identifiers, significantly lowering the potential for HIPAA violations and ensuring the security of patient data. Our system's automated privacy protections are designed to seamlessly integrate with healthcare providers' workflows, offering peace of mind and reducing the administrative burden associated with compliance.
